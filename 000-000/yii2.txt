@@ -1,0 +1,16 @@
+
+composer create-project --prefer-dist yiisoft/yii2-app-advanced yii2advanced
+
+---/---/---
+
+composer.json:
+
+	"codeception/module-filesystem": "^3.0 || ^1.1", ---> "codeception/module-filesystem": "*",
+
+---/---/---
+
+CREATE SCHEMA `yii2advanced` ;
+
+./yii migrate/create drop_username_column_from_user_table --fields="username:string(255):notNull:unique"
+
+---/---/---

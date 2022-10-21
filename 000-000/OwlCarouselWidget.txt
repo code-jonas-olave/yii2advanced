@@ -1,0 +1,37 @@
+composer.json
+
+"kv4nt/yii2-owl-carousel2": "*"
+
+---/---/---
+
+use kv4nt\owlcarousel\OwlCarouselWidget;
+
+    <?php
+        // https://github.com/kv4nt/yii2-owl-carousel2
+        // https://owlcarousel2.github.io/OwlCarousel2/docs/api-options.html
+        OwlCarouselWidget::begin([
+            'container' => 'div',
+            'assetType' => OwlCarouselWidget::ASSET_TYPE_CDN,
+            //'jqueryFunction' => 'jQuery',// or $
+            'containerOptions' => [
+                'id' => 'container-id',
+                'class' => 'container-class owl-theme'
+            ],
+            'pluginOptions'    => [
+                'autoplay'          => true,
+                'autoplayTimeout'   => 3000,
+                'items'             => 3,
+                'loop'              => true,
+                'itemsDesktop'      => [1199, 3],
+                'itemsDesktopSmall' => [979, 3],
+                'dots'              => false
+            ]
+        ]);
+    ?>
+
+    <div class="item-class"><img src="./img/00000001.jpg" alt="Image 1" class="img-responsive" /></div>
+    <div class="item-class"><img src="./img/00000002.jpg" alt="Image 2" class="img-responsive" /></div>
+    <div class="item-class"><img src="./img/00000003.jpg" alt="Image 3" class="img-responsive" /></div>
+    <div class="item-class"><img src="./img/00000004.jpg" alt="Image 4" class="img-responsive" /></div>
+
+    <?php OwlCarouselWidget::end(); ?>
