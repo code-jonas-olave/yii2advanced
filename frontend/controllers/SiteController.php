@@ -16,6 +16,7 @@ use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use Da\QrCode\Action\QrCodeAction;
 use common\models\Qr;
+use common\models\PaymentForm;
 
 /**
  * Site controller
@@ -255,5 +256,17 @@ class SiteController extends Controller
     public function actionReadQuickResponseCode()
     {
         return $this->render('read-quick-response-code');
+    }
+
+    public function actionPaymentForm()
+    {
+        $model = new PaymentForm();
+
+        if ($model->load(Yii::$app->request->post())) {
+        }
+
+        return $this->render('payment-form', [
+            'model' => $model
+        ]);
     }
 }

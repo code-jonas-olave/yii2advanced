@@ -37,6 +37,19 @@ AppAsset::register($this);
         });
     </script>
 
+    <style type="text/css">
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+          -moz-appearance: textfield;
+        }    
+    </style>
 </head>
 <body class="d-flex flex-column h-100">
 <?php $this->beginBody() ?>
@@ -59,6 +72,7 @@ AppAsset::register($this);
     } else {
         $menuItems[] = ['label' => 'Leer Código QR (desde Captura/Archivo)', 'url' => ['/site/read-quick-response-code'], 'class' => ['']];
         $menuItems[] = ['label' => 'Generar Código QR', 'url' => ['/site/quick-response-code'], 'class' => ['']];
+        $menuItems[] = ['label' => 'Formulario de pago', 'url' => ['/site/payment-form'], 'class' => ['']];
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post', ['class' => 'd-flex'])
             . Html::submitButton(
