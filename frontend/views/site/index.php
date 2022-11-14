@@ -8,7 +8,6 @@ use yii\helpers\Url;
 $this->title = Yii::$app->name;
 ?>
 <div class="site-index">
-
     <?php
         /* $dsn = 'mysql:host=192.168.100.32';
         $username = 'desa';
@@ -29,5 +28,4 @@ $this->title = Yii::$app->name;
         var_dump($posts);
         echo '</pre>'; */
     ?>
-
 </div>
